@@ -1,0 +1,22 @@
+{
+  "params": {
+    "local_server": {
+      "Host": "localhost",
+      "USER": "root",
+      "PORT": 3306,
+      "DB": "blog_info"
+    },
+    "social_media": {
+      "insta_url":"https://www.instagram.com/digitalworld1010/",
+      "gmail_name": "kunalkamble1010@gmail.com",
+      "password" :
+
+    },
+    "login": {
+      "user" : "kunalkamble111",
+      "password" :"kunal123456"
+    }
+
+
+  }
+}

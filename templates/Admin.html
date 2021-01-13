@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static', filename='img/home-bg.jpg')}} ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Admin Panel</h1>
+            <span class="subheading">Manage your post and change them</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- <div class="container" align="row">You are succesfully login...</div> -->
+<div class="container">
+  <h3>Basic Actions</h3>
+  <a href="/edit/0"><button class="btn btn-primary">ADD A NEW POST</button></a>
+  <hr>
+  <h3>Upload A File</h3>
+  we will add file here
+  <hr>
+  <h3> Edite Post </h3>           
+  <table class="table">
+    <thead>
+      <tr>
+        <th>SR.NO</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Edite</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in post %}
+      <tr>
+        <td>{{row[0]}}</td>         <!-- Sr.no -->
+        <td>{{row[1]}}</td>         <!-- Title -->
+        <td>{{row[4]}}</td>          <!-- Date -->
+        <td><a href="/edit/{{row.0}}"><button class="btn btn-primary">Edite</button></a></td>
+        <td><button class="btn btn-primary">Delete</button></td>
+      </tr>
+       {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
